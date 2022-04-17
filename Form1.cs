@@ -625,7 +625,7 @@ namespace WinFormsApp1
             listBox1.Font = new Font("华文彩云", label1.Font.Size, label1.Font.Style);
             monthCalendar1.Font = new Font("华文彩云", label1.Font.Size, label1.Font.Style);
         }
-
+        //S:其他模式的函数窗口
         private void 其他模式ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             save_file();
@@ -649,11 +649,10 @@ namespace WinFormsApp1
         {
 
         }
-
+        //S:星座模式的函数窗口
         private void 星座模式ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             save_file();
-
             Form9 simpleForm = new Form9();
             simpleForm.Show();
             this.Hide();
