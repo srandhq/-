@@ -30,7 +30,10 @@ namespace WinFormsApp1
             FileStream fs = new FileStream(".\\myfile.txt", FileMode.Create);
             //【2】创建写入器
             StreamWriter sw = new StreamWriter(fs);
+            sw.Write(TimeTable.star + "\r");//晨：写的时候也先写星座
+
             //【3】以流的方式“逐行”写入数据
+
             for (int i = 0; i < TimeTable.conTim; i++)
             {
                 sw.Write(TimeTable.tim[i].date + "\r");
@@ -60,6 +63,8 @@ namespace WinFormsApp1
             StreamReader ssr = new StreamReader(fs, Encoding.UTF8);
             //【3】以流的方式读取数据
 
+            string strstar = ssr.ReadLine();//晨：先读取星座
+            TimeTable.star = strstar;
             string str = ssr.ReadLine();
             string str2 = ssr.ReadLine();
             string str3 = ssr.ReadLine();
@@ -122,14 +127,14 @@ namespace WinFormsApp1
             Application.Exit();
         }
 
+
         //旭：打开常规模式，隐藏简洁模式
-          
         private void 模式ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //save_file();
             Form1 normalForm = new Form1();
-            normalForm.Show();
             this.Hide();
-            save_file();
+            normalForm.Show();
         }
 
         /*

@@ -16,7 +16,7 @@ namespace WinFormsApp1
 
         public static string chosetime;
 
- 
+        public static string star = "";
 
         public static int conTim = 0;
         public static int maxconTim = 1000;

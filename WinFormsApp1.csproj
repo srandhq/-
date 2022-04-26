@@ -35,6 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="AxInterop.WMPLib">
       <HintPath>bin\Debug\net472\AxInterop.WMPLib.dll</HintPath>
     </Reference>

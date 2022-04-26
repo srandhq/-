@@ -35,10 +35,10 @@ namespace WinFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.notice = new AxWMPLib.AxWindowsMediaPlayer();
             this.模式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.常规模式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简介模式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.星座模式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.万年历ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,9 +70,13 @@ namespace WinFormsApp1
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.常规模式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listBox2 = new ClassLibrary1.TransParentListBox();
+            this.listBox1 = new ClassLibrary1.TransParentListBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.notice)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,27 +118,14 @@ namespace WinFormsApp1
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(128, 85);
+            this.button2.Location = new System.Drawing.Point(150, 100);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 35);
             this.button2.TabIndex = 6;
-            this.button2.Text = "编辑事件";
+            this.button2.Text = "修改事件";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(18, 154);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(344, 144);
-            this.listBox1.TabIndex = 24;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // timer
             // 
@@ -162,11 +153,18 @@ namespace WinFormsApp1
             this.模式ToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.模式ToolStripMenuItem.Text = "模式";
             // 
+            // 常规模式ToolStripMenuItem
+            // 
+            this.常规模式ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("常规模式ToolStripMenuItem.Image")));
+            this.常规模式ToolStripMenuItem.Name = "常规模式ToolStripMenuItem";
+            this.常规模式ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.常规模式ToolStripMenuItem.Text = "常规模式";
+            // 
             // 简介模式ToolStripMenuItem
             // 
             this.简介模式ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("简介模式ToolStripMenuItem.Image")));
             this.简介模式ToolStripMenuItem.Name = "简介模式ToolStripMenuItem";
-            this.简介模式ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.简介模式ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.简介模式ToolStripMenuItem.Text = "简洁模式";
             this.简介模式ToolStripMenuItem.Click += new System.EventHandler(this.简介模式ToolStripMenuItem_Click);
             // 
@@ -174,7 +172,7 @@ namespace WinFormsApp1
             // 
             this.星座模式ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("星座模式ToolStripMenuItem.Image")));
             this.星座模式ToolStripMenuItem.Name = "星座模式ToolStripMenuItem";
-            this.星座模式ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.星座模式ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.星座模式ToolStripMenuItem.Text = "休闲模式";
             this.星座模式ToolStripMenuItem.Click += new System.EventHandler(this.星座模式ToolStripMenuItem_Click);
             // 
@@ -183,7 +181,7 @@ namespace WinFormsApp1
             this.万年历ToolStripMenuItem.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.万年历ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("万年历ToolStripMenuItem.Image")));
             this.万年历ToolStripMenuItem.Name = "万年历ToolStripMenuItem";
-            this.万年历ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.万年历ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.万年历ToolStripMenuItem.Text = "万年历";
             this.万年历ToolStripMenuItem.Click += new System.EventHandler(this.其他模式ToolStripMenuItem_Click);
             // 
@@ -210,7 +208,7 @@ namespace WinFormsApp1
             this.自定义壁纸ToolStripMenuItem});
             this.个性化背景ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("个性化背景ToolStripMenuItem.Image")));
             this.个性化背景ToolStripMenuItem.Name = "个性化背景ToolStripMenuItem";
-            this.个性化背景ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.个性化背景ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.个性化背景ToolStripMenuItem.Text = "个性化背景";
             // 
             // 老年壁纸1ToolStripMenuItem
@@ -273,7 +271,7 @@ namespace WinFormsApp1
             this.彩云ToolStripMenuItem});
             this.个性化字体ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("个性化字体ToolStripMenuItem.Image")));
             this.个性化字体ToolStripMenuItem.Name = "个性化字体ToolStripMenuItem";
-            this.个性化字体ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.个性化字体ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.个性化字体ToolStripMenuItem.Text = "个性化字体";
             // 
             // 默认字体ToolStripMenuItem
@@ -329,7 +327,7 @@ namespace WinFormsApp1
             this.自定义铃声ToolStripMenuItem});
             this.个性化铃声ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("个性化铃声ToolStripMenuItem.Image")));
             this.个性化铃声ToolStripMenuItem.Name = "个性化铃声ToolStripMenuItem";
-            this.个性化铃声ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.个性化铃声ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.个性化铃声ToolStripMenuItem.Text = "个性化铃声";
             // 
             // 稻香ToolStripMenuItem
@@ -419,35 +417,19 @@ namespace WinFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 324);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 31;
-            this.label2.Text = "今日诸事不宜";
+            this.label2.Text = "星座运势：";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(454, 254);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(289, 169);
-            this.listBox2.TabIndex = 32;
-            // 
-            // 常规模式ToolStripMenuItem
-            // 
-            this.常规模式ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("常规模式ToolStripMenuItem.Image")));
-            this.常规模式ToolStripMenuItem.Name = "常规模式ToolStripMenuItem";
-            this.常规模式ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.常规模式ToolStripMenuItem.Text = "常规模式";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources.老年壁纸1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(767, 434);
@@ -456,16 +438,103 @@ namespace WinFormsApp1
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.Transparent;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(466, 254);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(289, 164);
+            this.listBox2.TabIndex = 34;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Transparent;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(18, 154);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(344, 124);
+            this.listBox1.TabIndex = 33;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
+            // 
+            // textBox2
+            // 
+            
+            this.textBox2.ForeColor = System.Drawing.Color.BurlyWood;
+            this.textBox2.Location = new System.Drawing.Point(18, 346);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(344, 77);
+            this.textBox2.TabIndex = 35;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(10, 100);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 35);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "添加事件";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(290, 100);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(122, 35);
+            this.button3.TabIndex = 37;
+            this.button3.Text = "删除事件";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "白羊座",
+            "金牛座",
+            "双子座",
+            "巨蟹座",
+            "狮子座",
+            "处女座",
+            "天秤座",
+            "天蝎座",
+            "射手座",
+            "摩羯座",
+            "水瓶座",
+            "双鱼座"});
+            this.comboBox1.Location = new System.Drawing.Point(646, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 38;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 434);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.notice);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -516,7 +585,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.ToolStripMenuItem 搜索ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem 老年壁纸1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 老年壁纸2ToolStripMenuItem;
@@ -534,7 +602,12 @@ namespace WinFormsApp1
         private System.Windows.Forms.ToolStripMenuItem 幼圆ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 彩云ToolStripMenuItem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox2;
+        private ClassLibrary1.TransParentListBox listBox1;
+        private ClassLibrary1.TransParentListBox listBox2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
